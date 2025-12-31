@@ -1,69 +1,88 @@
-**Jarvis**: Personal Desktop Assistant
-A modular, voice-activated desktop assistant built with Python. 
+## Jarvis – Voice Controlled AI Assistant 🎙️🤖
+Jarvis is a Python-based voice assistant that can recognize speech, respond with voice feedback, launch Windows applications, fetch weather updates, read news headlines, play music, and even interact with Google Gemini AI for intelligent responses.
 
-🚀 **Features**
-**Voice Control**: Uses SpeechRecognition and sounddevice for hands-free interaction.
+## ✨ Features
+**Wake word detection:** Activate Jarvis by saying "Jarvis".
 
-**AI Brain**: Integrated with Google Gemini API for natural language processing and short, smart responses.
+**Speech recognition:** Uses Google Speech Recognition to process voice commands.
 
-**System Automation:**
+**Voice feedback:** Speaks responses using pyttsx3.
 
-Launch Windows applications (Calculator, Notepad, File Explorer, etc.).
+**AI integration:** Connects to Google Gemini API for conversational replies.
 
-Take and save screenshots automatically.
+**Weather updates:** Fetches real-time weather using OpenWeather API.
 
-Fetch current date and time.
+**News headlines:** Reads top US headlines via NewsAPI.
 
-**Web Integration:**
+**Windows automation:** Launches apps like Calculator, Notepad, Paint, Edge, etc.
 
-Quick links to Google, YouTube, LinkedIn, GitHub, and WhatsApp.
+**Web browsing:** Opens Google, YouTube, LinkedIn, GitHub, WhatsApp Web, Colab.
 
-Music playback via a custom musicLibrary module.
+**Music playback:** Plays songs from a custom musicLibrary.
 
-**Real-time Info:**
-Weather: Live weather updates for any city via OpenWeatherMap API.
+**Screenshot capture:** Takes and saves screenshots automatically.
 
-News: Top headlines fetched via NewsAPI.
+**Date & time reporting:** Speaks current time and date.
 
-🛠️ **Tech Stack**
-Language: Python 3.x
+**Shutdown command:** Terminates the assistant safely.
 
-AI Model: Google Gemini 2.5 Flash
+## 🛠️ Requirements
+**Install the following Python packages:**
 
-Libraries: * pyttsx3 (Text-to-Speech)
+bash
+pip install speechrecognition sounddevice pyttsx3 requests python-dotenv pyautogui
+**Additional dependencies:**
 
-SpeechRecognition (Google Speech API)
+**musicLibrary.py:** A custom dictionary mapping song names to URLs.
 
-PyAutoGUI (GUI Automation)
+**Google Speech Recognition:** Requires internet connection.
 
-Requests (API calls)
+**Windows OS:** For app launching and automation.
 
-Dotenv (Environment management)
+## 🔑 Environment Variables
+Create a .env file in the project root with the following keys:
 
-📋 **Prerequisites**
-Before running the project, ensure you have the following API keys:
+**GEMINI_API_KEY**=your_gemini_api_key_here
+**WEATHER_API_KEY**=your_openweather_api_key_here
+**NEWS_API_KEY**=your_newsapi_key_here
+## 📂 Project Structure
+Jarvis/
+│── jarvis.py          # Main assistant script
+│── musicLibrary.py    # Dictionary of songs and links
+│── .env               # API keys
+## ▶️ Usage
+**Run the assistant:**
 
-Gemini API Key: Obtain from Google AI Studio.
+bash
+python jarvis.py
+Say "Jarvis" to wake the assistant.
 
-OpenWeatherMap API Key: Obtain from OpenWeather.
+Give commands like:
 
-NewsAPI Key: Obtain from NewsAPI.org.
+"Launch calculator"
 
-🎙️ **Usage**
-Run the main script: python main.py
+"Open YouTube"
 
-Say the wake word "Jarvis".
+"Play Alone"
 
-Give a command, for example:
+"What time is it?"
 
-"Launch Notepad"
+"Weather in Kolkata"
 
-"weather"
+"News"
 
-"Play Faded"
+"Shutdown"
 
-"news"
+## ⚠️ Notes
+Works best on Windows (due to os.system app launch commands).
 
-"Take screenshot"
+Requires internet connection for AI, weather, news, and speech recognition.
 
-To exit the program, simply say "Shutdown".
+Screenshot path is hardcoded; update it to your preferred directory.
+
+## 🚀 Future Improvements
+Add support for more apps and services.
+
+Enhance error handling and offline capabilities.
+
+Modularize commands for easier expansion.
