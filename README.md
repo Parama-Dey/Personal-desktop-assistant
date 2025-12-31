@@ -45,11 +45,15 @@ Create a .env file in the project root with the following keys:
 **GEMINI_API_KEY**=your_gemini_api_key_here
 **WEATHER_API_KEY**=your_openweather_api_key_here
 **NEWS_API_KEY**=your_newsapi_key_here
+
 ## 📂 Project Structure
-Jarvis/
-│── jarvis.py          # Main assistant script
-│── musicLibrary.py    # Dictionary of songs and links
-│── .env               # API keys
+```
+Repo
+├── main.py          # Main assistant script
+├── musicLibrary.py    # Custom music links
+├── requirements.txt   # Dependencies
+└── README.md          # Documentation
+```
 ## ▶️ Usage
 **Run the assistant:**
 
@@ -67,7 +71,7 @@ Give commands like:
 
 "What time is it?"
 
-"Weather in Kolkata"
+"Weather"
 
 "News"
 
