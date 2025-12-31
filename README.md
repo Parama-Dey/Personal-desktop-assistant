@@ -58,7 +58,7 @@ Give a command, for example:
 
 "Launch Notepad"
 
-"What is the weather in Kolkata?"
+"weather"
 
 "Play Faded"
 
